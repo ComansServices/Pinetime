@@ -37,6 +37,7 @@ jobs:
         uses: actions/cache@v2
         env:
           cache-name: cache-toolchain-9-2020-q2
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true  
         with:
           path: ${{ runner.temp }}/arm-none-eabi
           key:  ${{ runner.os }}-build-${{ env.cache-name }}
